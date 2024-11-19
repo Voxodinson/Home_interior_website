@@ -2,6 +2,7 @@ import LinvingRoom from "../assets/cardImage/livingroom.jpg";
 import bathroom from "../assets/cardImage/bathroom.jpg";
 import bedroom from "../assets/cardImage/bedroom.jpg";
 import kitchen from "../assets/cardImage/blackKitchen.jpg";
+import { NavLink } from "react-router-dom";
 const ProductsFeathur = () => {
   return (
     <div className="w-full h-fit flex flex-col gap-[1rem] items-center justify-center py-[55px]   border-b-[1px]">
@@ -24,12 +25,12 @@ const ProductsFeathur = () => {
               optioaut numquam
               <br /> autem qui earum cupiditate, tempore dolor illum.
             </span>
-            <a
-              href=""
+            <NavLink
+              to="/products"
               className="w-fit px-20 py-1 text-white capitalize  border-[1px] border-white mt-[10px] hover:bg-white/10 hover:backdrop-blur-sm"
             >
               View all
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className="bg-blue-400 w-full md:w-[35%]  h-[300px]">
@@ -68,12 +69,12 @@ const ProductsFeathur = () => {
               <br /> autem qui earum cupiditate, tempore dolor illum.
             </span>
 
-            <a
-              href=""
+            <NavLink
+              to="/products"
               className="w-fit px-20 py-1 text-white capitalize  border-[1px] border-white mt-[10px] hover:bg-white/10 hover:backdrop-blur-sm"
             >
               View all
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

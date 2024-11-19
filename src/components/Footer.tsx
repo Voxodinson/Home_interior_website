@@ -2,27 +2,33 @@ import { FaFacebookMessenger, FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 type payment = {
   image: string;
+  id: number
 };
 const PaymentItem: payment[] = [
   {
     image: "src/assets/creditCardImg/apple_pay.png",
+    id: 1,
   },
   {
     image: "src/assets/creditCardImg/Mastercard Logo.jpg",
+    id: 2,
   },
   {
     image: "src/assets/creditCardImg/paypal.png",
+    id: 3,
   },
   {
     image: "src/assets/creditCardImg/visa.jpg",
+    id: 4,
   },
   {
     image: "src/assets/creditCardImg/visaElectron.png",
+    id: 5,
   },
 ];
 const Footer = () => {
   return (
-    <div className="w-full h-fit flex flex-col items-center justify-center mt-[30px] ">
+    <div className="w-full h-fit flex flex-col items-center justify-center mt-[30px] pt-6 border-t-[1px] border-gray-200 ">
       <div className="w-[90%] h-full flex items-start justify-between   ">
         <div className="w-fit h-fit items-center justify-center">
           <div className=" flex items-center justify-center flex-col">
@@ -145,10 +151,10 @@ const Footer = () => {
 
           <div className="mt-[30px]">
             <ul className="flex gap-[.6rem] items-center justify-start h-fit">
-              {PaymentItem.map((e) => {
+              {PaymentItem.map((i) => {
                 return (
-                  <li className="w-[45px]  ">
-                    <img src={e.image} alt="" className="" />
+                  <li className="w-[45px] " key={i.id}>
+                    <img src={i.image} alt="" className="" />
                   </li>
                 );
               })}
